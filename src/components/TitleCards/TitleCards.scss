@@ -1,0 +1,44 @@
+.title-cards {
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    h2 {
+        margin-bottom: 8px;
+    }
+}
+
+.card-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+
+
+    /* Hide scrollbar for WebKit-based browsers */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+
+    /* Optional - prevents unwanted scrolling while hiding scrollbars */
+    -ms-overflow-style: none; /* For IE and Edge */
+
+    img {
+        width: 240px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .card {
+        position: relative;
+    }
+
+    p {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+
