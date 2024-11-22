@@ -7,6 +7,8 @@ import { useEffect } from 'react'
 const TitleCards = ({title, category}) => {
 
   const [apiData, setApiData] = useState([]) // Empty array for now.
+
+
   const cardsRef = useRef()
 
 
@@ -25,7 +27,7 @@ const TitleCards = ({title, category}) => {
 
   useEffect(() => {
     
-    fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+    fetch(`https://api.themoviedb.org/3/movie/${category ? category : "now_playing"}?language=en-US&page=1`, options)
     .then(res => res.json())
     .then(res => setApiData(res.results))
     .catch(err => console.error(err));
@@ -39,7 +41,9 @@ const TitleCards = ({title, category}) => {
       <div className="card-list" ref={cardsRef}>
         {apiData.map((card) =>
           <div className='card' key={card.id}>
-            <img src={`https://image.tmdb.org/t/p/w500/${card.backdrop_path}` } alt={card.title} />
+            <div className="image-container">
+              <img src={`https://image.tmdb.org/t/p/w500/${card.backdrop_path}` } alt={card.title} />
+            </div>
             <p>{card.title}</p>
           </div>
         )}
