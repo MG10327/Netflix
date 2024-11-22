@@ -16,31 +16,31 @@ import card_img14 from './card14.jpg';
 const cards_data = [
     {
         image:card_img1,
-        name:"Kung Fu Panda"
+        name:"Hot Frosty"
     },
     {
         image:card_img2,
-        name:"Squid Game"
+        name:"Meet Me Next Christmas"
     },
     {
         image:card_img3,
-        name:"Squid Challange"
+        name:"Minions: The Rise of Gru"
     },
     {
         image:card_img4,
-        name:"Jawan"
+        name:"Alita: Battle Angel"
     },
     {
         image:card_img5,
-        name:"The Ghost"
+        name:"Focus"
     },
     {
         image:card_img6,
-        name:"Lucifer"
+        name:"Ready or Not"
     },
     {
         image:card_img7,
-        name:"The Railway MEN"
+        name:"Time Cut"
     },
     {
         image:card_img8,
@@ -48,27 +48,27 @@ const cards_data = [
     },
     {
         image:card_img9,
-        name:"Sacred Games"
+        name:"Don't Move"
     },
     {
         image:card_img10,
-        name:"Adipurush"
+        name:"The Lost City"
     },
     {
         image:card_img11,
-        name:"Sukhee"
+        name:"Return of the King: The Fall and Rise of Elvis Presley"
     },
     {
         image:card_img12,
-        name:"Mission Ganj"
+        name:"Harold and the Purple Crayon"
     },
     {
         image:card_img13,
-        name:"Leo"
+        name:"The Angry Birds Movie 2"
     },
     {
         image:card_img14,
-        name:"All of Us Are Dead"
+        name:"Just Go With It"
     },
 ]
 
