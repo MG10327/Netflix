@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import "./Player.scss"
 import back_arrow_icon from "../../assets/back_arrow_icon.png"
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const Player = () => {
 
   const {id} = useParams()
+  const navigate = useNavigate()
 
   const [apiData, setApiData] = useState({
     name: "",
@@ -38,9 +39,8 @@ const Player = () => {
 
   return (
     <div className='player'>
-      <a href="/">
-        <img src={back_arrow_icon} alt="" />
-      </a>
+        {/* This on click will track where you are by the slashes in the url and take you two places back. So if your url says "thing.com/place/otherplace " "/place" is one step back, and "thing.com" is 2 steps back */}
+        <img src={back_arrow_icon} alt="" onClick={() => {navigate(-2)}} />
         <div className='iframe-container' key={apiData.key}>
           <iframe
             src={`https://www.youtube.com/embed/${apiData.key}`}
