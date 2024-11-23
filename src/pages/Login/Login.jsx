@@ -7,6 +7,18 @@ import {login, signup} from "../../firebase"
 const Login = () => {
 
   const [signState, setSignState] = useState("Sign In")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const user_auth = async (e) => {
+    e.preventDefault() // Stops reloading on form submit
+    if(signState === "Sign In") {
+      await login(email, password)
+    } else {
+      await signup(name, email, password)
+    }
+  }
 
   return (
     <div className='login'>
@@ -16,11 +28,11 @@ const Login = () => {
       <div className="login-form">
         <h1>{signState}</h1>
         <form >
-          {signState === "Sign Up" ? <input type="text" placeholder='Your name' /> : <></>}
+          {signState === "Sign Up" ? <input type="text" value={name} onChange={(e) => {setName(e.target.value)}} placeholder='Your name' /> : <></>}
 
-          <input type="email" placeholder='Your email' />
-          <input type="password" placeholder='Your email' />
-          <button className='button'>Sign In</button>
+          <input type="email" value={email} onChange={(e) {setEmail(e.target.value)}} placeholder='Your email' />
+          <input type="password" value={password} onChange={(e) {setPassword(e.target.value)}} placeholder='Your email' />
+          <button className='button' onClick={user_auth}>Sign In</button>
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
