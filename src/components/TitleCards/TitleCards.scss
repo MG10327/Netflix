@@ -53,5 +53,41 @@ div.image-container::before {
     height: 100%;
     background: rgba(0,0,0, 0.2);
     transition: opacity 0.3s ease;
+}
 
+@media (max-width: 800px) {
+    .title-cards {
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .card-list {
+        img {
+            width: 200px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .title-cards {
+        h2 {
+            font-size: 15px;
+        }
+    }
+
+    .card-list {
+        img {
+            width: 165px;
+        }
+        p {
+            font-size: 10px;
+        }
+    }
 }
