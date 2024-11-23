@@ -40,7 +40,9 @@ const Player = () => {
   return (
     <div className='player'>
         {/* This on click will track where you are by the slashes in the url and take you two places back. So if your url says "thing.com/place/otherplace " "/place" is one step back, and "thing.com" is 2 steps back */}
-        <img src={back_arrow_icon} alt="" onClick={() => {navigate(-2)}} />
+        <a href="/">
+          <img src={back_arrow_icon} alt="" />
+        </a>
         <div className='iframe-container' key={apiData.key}>
           <iframe
             src={`https://www.youtube.com/embed/${apiData.key}`}
