@@ -44,7 +44,9 @@ const Login = () => {
 
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Your email' />
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Your password' />
-            <button className='button' onClick={user_auth}>Sign In</button>
+            {signState === "Sign In" ? <button className='button' onClick={user_auth}>Sign In</button>
+            : <button className='button' onClick={user_auth}>Sign Up</button>
+            }
             <div className="form-help">
               <div className="remember">
                 <input type="checkbox" />
